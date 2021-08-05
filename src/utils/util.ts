@@ -27,7 +27,7 @@ export const convertCentimeterToMeter = (heightInCM: number): number => {
 };
 
 export const calculateBMI = (weightInKG: number, heightInMeter: number): number => {
-  return Math.round((weightInKG / (heightInMeter * heightInMeter)) * 100) / 100;
+  return Math.round((weightInKG / (heightInMeter * heightInMeter)) * 10) / 10;
 };
 
 export const getBMICategory = (bmiIndex: number): string => {
@@ -65,7 +65,7 @@ export const getHealthRisk = (bmiIndex: number): string => {
 export const calculateOverweightPeople = (bmiDtos: BMIDto[]): number => {
   let count = 0;
   bmiDtos.forEach(item => {
-    if (item.bmiCategory === BMICategoryEnum.OVERWEIGHT) count++;
+    if (item.bmiCategory !== BMICategoryEnum.UNDERWEIGHT && item.bmiCategory !== BMICategoryEnum.NORMAL_WEIGHT) count++;
   });
   return count;
 };
