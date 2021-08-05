@@ -1,5 +1,5 @@
 import { GenderEnum } from '@enums/gender.enum';
-import { IsArray, IsEnum, IsNumber, IsOptional, IsString } from 'class-validator';
+import { IsEnum, IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class BMIDto {
   @IsString()
@@ -14,13 +14,13 @@ export class BMIDto {
 
   @IsString()
   @IsOptional()
-  public bmiCategory: string;
+  public bmiCategory?: string;
 
   @IsNumber()
   @IsOptional()
-  public bmi: number;
+  public bmi?: number;
 
   @IsString()
   @IsOptional()
-  public healthRisk: string;
+  public healthRisk?: string;
 }

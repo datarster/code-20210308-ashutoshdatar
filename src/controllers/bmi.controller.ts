@@ -10,7 +10,7 @@ class BMIController {
     try {
       let bmiDtos: BMIDto[] = [];
       let noOfOverWeightPeople = 0;
-      await this.bmiCalculatorService.calculateBMI(req.body.data).then(result => {
+      await this.bmiCalculatorService.calculateBMI(req.body).then(result => {
         bmiDtos = result;
         noOfOverWeightPeople = calculateOverweightPeople(bmiDtos);
       });
