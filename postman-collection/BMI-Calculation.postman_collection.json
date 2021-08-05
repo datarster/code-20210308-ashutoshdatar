@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "785b5fd9-6a6b-4630-b4f0-7496c678bd30",
+		"name": "BMI-Calculation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Calculate BMI",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"gender\": \"Male\",\n        \"heightCM\": 171,\n        \"weightKG\": 96\n    },\n    {\n        \"gender\": \"Male\",\n        \"heightCM\": 161,\n        \"weightKG\": 85\n    },\n    {\n        \"gender\": \"Male\",\n        \"heightCM\": 180,\n        \"weightKG\": 77\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/bmi",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bmi"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Calculate BMI - Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"gender\": \"Male\",\n        \"heightCM\": 171,\n        \"weightKG\": 96\n    },\n    {\n        \"gender\": \"Male\",\n        \"heightCM\": 161,\n        \"weightKG\": 85\n    },\n    {\n        \"gender\": \"Male\",\n        \"heightCM\": 180,\n        \"weightKG\": 77\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/bmi",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bmi"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "your.domain.com"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "154"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9a-r6UTZK2GF2fG2t8OREQnb9pRjK8\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 06:16:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"noOfOverWeightPeople\": 1,\n    \"data\": [\n        {\n            \"gender\": \"Male\",\n            \"heightCM\": 171,\n            \"weightKG\": 96,\n            \"bmi\": 32.83,\n            \"bmiCategory\": \"moderatery obese\",\n            \"healthRisk\": \"medium risk\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
